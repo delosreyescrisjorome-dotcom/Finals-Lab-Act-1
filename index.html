@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>User Info Card</h1>
+      <p class="subtitle">Fill in your details below, then reveal your card.</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel">
+        <h2>Your Information</h2>
+        <form id="infoForm">
+          <div class="field">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Juan Dela Cruz"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="juan@example.com"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="1"
+              max="120"
+              placeholder="21"
+            />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="09XXXXXXXXX"
+            />
+          </div>
+
+          <div class="field">
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday" />
+          </div>
+
+          <div class="field">
+            <label for="address">Address</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="City, Province"
+            />
+          </div>
+
+          <div class="field">
+            <label for="occupation">Occupation</label>
+            <input
+              type="text"
+              id="occupation"
+              name="occupation"
+              placeholder="Student"
+            />
+          </div>
+
+          <div class="field">
+            <label for="bio">Short Bio</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="3"
+              placeholder="A few words about yourself"
+            ></textarea>
+          </div>
+
+          <div class="field">
+            <label for="favColor">Favorite Color</label>
+            <select id="favColor" name="favColor">
+              <option value="Steel Blue">Steel Blue</option>
+              <option value="Forest Green">Forest Green</option>
+              <option value="Sunset Orange">Sunset Orange</option>
+              <option value="Royal Purple">Royal Purple</option>
+              <option value="Charcoal">Charcoal</option>
+            </select>
+          </div>
+
+          <fieldset class="field">
+            <legend>Preferred Contact Method</legend>
+            <label class="radio-label">
+              <input
+                type="radio"
+                name="contactMethod"
+                class="contact-radio"
+                value="Email"
+                checked
+              />
+              Email
+            </label>
+            <label class="radio-label">
+              <input
+                type="radio"
+                name="contactMethod"
+                class="contact-radio"
+                value="Phone"
+              />
+              Phone
+            </label>
+            <label class="radio-label">
+              <input
+                type="radio"
+                name="contactMethod"
+                class="contact-radio"
+                value="Either"
+              />
+              Either
+            </label>
+          </fieldset>
+
+          <div class="field checkbox-field">
+            <label class="checkbox-label">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              Subscribe to newsletter
+            </label>
+          </div>
+
+          <button type="button" id="showInfoBtn" class="show-btn">
+            Show My Info
+          </button>
+        </form>
+      </section>
+
+      <section class="panel output-panel">
+        <h2>Your Card</h2>
+        <div id="outputCard" class="output-card empty">
+          <p class="placeholder">
+            Your info card will appear here once you click "Show My Info".
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>CCS114 &mdash; Web Technologies &bull; Finals Laboratory 1</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
